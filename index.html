@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinkit Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .status-bar {
+            height: 44px;
+            background-color: #00b53f;
+        }
+        .product-card {
+            transition: transform 0.2s;
+        }
+        .product-card:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body class="max-w-[430px] mx-auto bg-white min-h-screen">
+    <!-- Status Bar -->
+    <div class="status-bar flex items-center justify-between px-4 text-white">
+        <span>9:41</span>
+        <div class="flex gap-2">
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-battery-full"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="p-4 border-b">
+        <div class="flex items-center justify-between mb-3">
+            <div class="flex items-center gap-2">
+                <i class="bi bi-geo-alt text-green-500"></i>
+                <div>
+                    <p class="text-sm font-semibold">Delivery to</p>
+                    <p class="text-xs text-gray-500">123 Main Street, City</p>
+                </div>
+            </div>
+            <button class="bg-green-500 text-white px-4 py-1 rounded-md text-sm">13 MIN</button>
+        </div>
+        <div class="relative">
+            <input type="search" placeholder="Search for products" class="w-full p-2 pl-10 bg-gray-100 rounded-lg text-sm">
+            <i class="bi bi-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+    </header>
+
+    <!-- Categories Scroll -->
+    <div class="overflow-x-auto p-4 whitespace-nowrap">
+        <div class="inline-flex gap-4">
+            <div class="flex flex-col items-center w-16">
+                <div class="w-16 h-16 bg-orange-100 rounded-lg mb-1 flex items-center justify-center">
+                    <i class="bi bi-basket text-2xl text-orange-500"></i>
+                </div>
+                <span class="text-xs">Groceries</span>
+            </div>
+            <div class="flex flex-col items-center w-16">
+                <div class="w-16 h-16 bg-green-100 rounded-lg mb-1 flex items-center justify-center">
+                    <i class="bi bi-apple text-2xl text-green-500"></i>
+                </div>
+                <span class="text-xs">Fruits</span>
+            </div>
+            <div class="flex flex-col items-center w-16">
+                <div class="w-16 h-16 bg-red-100 rounded-lg mb-1 flex items-center justify-center">
+                    <i class="bi bi-egg-fried text-2xl text-red-500"></i>
+                </div>
+                <span class="text-xs">Food</span>
+            </div>
+            <div class="flex flex-col items-center w-16">
+                <div class="w-16 h-16 bg-purple-100 rounded-lg mb-1 flex items-center justify-center">
+                    <i class="bi bi-cup-straw text-2xl text-purple-500"></i>
+                </div>
+                <span class="text-xs">Drinks</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="grid grid-cols-2 gap-4 p-4">
+        <div class="product-card bg-white p-3 rounded-lg shadow-sm border">
+            <img src="https://source.unsplash.com/200x200/?groceries" alt="Product" class="w-full h-32 object-cover rounded-lg mb-2">
+            <p class="text-sm font-semibold">Fresh Tomatoes</p>
+            <p class="text-xs text-gray-500 mb-2">1 kg</p>
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-bold">₹40</span>
+                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm">ADD</button>
+            </div>
+        </div>
+
+        <div class="product-card bg-white p-3 rounded-lg shadow-sm border">
+            <img src="https://source.unsplash.com/200x200/?vegetables" alt="Product" class="w-full h-32 object-cover rounded-lg mb-2">
+            <p class="text-sm font-semibold">Fresh Onions</p>
+            <p class="text-xs text-gray-500 mb-2">1 kg</p>
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-bold">₹30</span>
+                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm">ADD</button>
+            </div>
+        </div>
+
+        <div class="product-card bg-white p-3 rounded-lg shadow-sm border">
+            <img src="https://source.unsplash.com/200x200/?fruits" alt="Product" class="w-full h-32 object-cover rounded-lg mb-2">
+            <p class="text-sm font-semibold">Fresh Apples</p>
+            <p class="text-xs text-gray-500 mb-2">4 pcs</p>
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-bold">₹120</span>
+                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm">ADD</button>
+            </div>
+        </div>
+
+        <div class="product-card bg-white p-3 rounded-lg shadow-sm border">
+            <img src="https://source.unsplash.com/200x200/?bread" alt="Product" class="w-full h-32 object-cover rounded-lg mb-2">
+            <p class="text-sm font-semibold">Wheat Bread</p>
+            <p class="text-xs text-gray-500 mb-2">400g</p>
+            <div class="flex items-center justify-between">
+                <span class="text-sm font-bold">₹35</span>
+                <button class="bg-green-500 text-white px-3 py-1 rounded text-sm">ADD</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 max-w-[430px] mx-auto bg-white border-t py-2 px-4">
+        <div class="flex justify-between items-center">
+            <button class="flex flex-col items-center">
+                <i class="bi bi-house text-green-500"></i>
+                <span class="text-xs mt-1">Home</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="bi bi-collection text-gray-400"></i>
+                <span class="text-xs mt-1">Categories</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="bi bi-search text-gray-400"></i>
+                <span class="text-xs mt-1">Search</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="bi bi-cart text-gray-400"></i>
+                <span class="text-xs mt-1">Cart</span>
+            </button>
+            <button class="flex flex-col items-center">
+                <i class="bi bi-person text-gray-400"></i>
+                <span class="text-xs mt-1">Account</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Add to cart functionality
+        document.querySelectorAll('.product-card button').forEach(button => {
+            button.addEventListener('click', function() {
+                const originalText = this.textContent;
+                this.textContent = 'ADDED';
+                this.classList.remove('bg-green-500');
+                this.classList.add('bg-gray-500');
+                
+                setTimeout(() => {
+                    this.textContent = originalText;
+                    this.classList.remove('bg-gray-500');
+                    this.classList.add('bg-green-500');
+                }, 1000);
+            });
+        });
+    </script>
+<script>document.body.addEventListener('wheel', e => { if (!e.ctrlKey) return; e.preventDefault(); return }, { passive: false })</script>
+	</body>
+</html>
